@@ -1,3 +1,3 @@
 # jogo-da-forca
 
-# deploy: https://www.netlify.com/
+deploy: https://www.netlify.com/
