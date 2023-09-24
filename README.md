@@ -12,10 +12,18 @@ Outra característica do projeto é que as funções desenvolvidas devem obedece
 ### Funcionamento
     - Ao iniciar o jogo, o sistema irá exibir uma lista de temas disponíveis.
     - O usuário irá selecionar um tema, então o jogo inicia.
-    - O sistema irá selecionar aleatoriamente uma palavra associada ao tema selecionado pelo usuário.
-    - O sistema irá exibir uma nova tela, que contém um "teclado virtual", um conjunto de linhas "em branco"(quantidade de linhas será igual ao número de caracteres da palavras selecionada pelo sistema) e um desenho de uma forca. Além disso sistema irá exibir o tema selecionado pelo usuário.
-    - Se o usuário clicar em uma letra do teclado virtual que pertence ao conjunto de caracteres da palavra selecionada aleatoriamente pelo sistema, o sistema irá substituir a linha em branco por uma linha contendo a palavra selecionada pelo usuário.
-    - Se o usuário clicar em uma letra que não pertence ao conjunto de caracteres, ele terá sua vida reduzida em uma unidade.
+    - O sistema irá selecionar aleatoriamente uma palavra associada ao tema 
+    selecionado pelo usuário.
+    - O sistema irá exibir uma nova tela, que contém um "teclado virtual", 
+    um conjunto de linhas "em branco"(quantidade de linhas será igual ao 
+    número de caracteres da palavras selecionada pelo sistema) e um desenho 
+    de uma forca. Além disso sistema irá exibir o tema selecionado pelo usuário.
+    - Se o usuário clicar em uma letra do teclado virtual que pertence ao 
+    conjunto de caracteres da palavra selecionada aleatoriamente pelo sistema, 
+    o sistema irá substituir a linha em branco por uma linha contendo a palavra 
+    selecionada pelo usuário.
+    - Se o usuário clicar em uma letra que não pertence ao conjunto de caracteres, 
+    ele terá sua vida reduzida em uma unidade.
 
 ## Padrões adotados
     - Declaração de constantes e funções: camelCase
