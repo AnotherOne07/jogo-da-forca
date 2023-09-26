@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Importando arquivos de estilização locais-->
-    <link rel="stylesheet" href="./css/teclado.css">
     <link rel="stylesheet" href="./css/main.css">
     <title>Menu inicial</title>
 </head>
@@ -14,10 +13,10 @@
         <div class="bubbles">
             <span style="--i:1"></span>
             <span style="--i:11"></span>
+            <span style="--i:15"></span>
             <span style="--i:21"></span>
-            <span style="--i:31"></span>
-            <span style="--i:41"></span>
-            <span style="--i:51"></span>
+            <span style="--i:27"></span>
+            <span style="--i:30"></span>
             <span style="--i:61"></span>
             <span style="--i:2"></span>
             <span style="--i:12"></span>
@@ -49,14 +48,15 @@
             <span style="--i:14"></span>
         </div>
     </div>
-    
-    <!--Container principal da página inicial-->
-    <main>
-        <h1 class="title">Jogo da forca</h1>
-        <div class="flex column gap-20">
-            <a href="./forca.html" class="no-style shadow-effect"><div class="bt-primary">Iniciar Jogo</div></a>
-            <a href="./temas.html" class="no-style shadow-effect"><div class="bt-primary">Gerenciar Temas</div></a>
-        </div>
-    </main>
+    <div class="flex center full">
+        <!--Container principal da página inicial-->
+        <main class="main flex column margin-auto gap-20 center">
+            <h1 class="alter-text top-30">Jogo da forca</h1>
+            <div class="flex column gap-20">
+                <a href="./forca.html" class="no-style shadow-effect"><div class="bt-primary">Iniciar Jogo</div></a>
+                <a href="./temas.html" class="no-style shadow-effect"><div class="bt-primary">Gerenciar Temas</div></a>
+            </div>
+        </main>
+    </div>
 </body>
 </html>

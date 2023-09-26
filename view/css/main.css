@@ -4,6 +4,7 @@
 @import url('apoio.css');
 @import url('texto.css');
 @import url('animacoes.css');
+@import url('componente.css');
 
 *{padding: 0;margin: 0;box-sizing: border-box;}
 html{
@@ -17,9 +18,4 @@ body{
 }
 main{
     width: 60%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
 }
