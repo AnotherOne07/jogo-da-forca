@@ -1,0 +1,25 @@
+@import url('teclado.css');
+@import url('botoes.css');
+@import url('layout.css');
+@import url('apoio.css');
+@import url('texto.css');
+@import url('animacoes.css');
+
+*{padding: 0;margin: 0;box-sizing: border-box;}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: #0c192c;
+}
+main{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
