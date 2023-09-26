@@ -32,6 +32,6 @@ Outra característica do projeto é que as funções desenvolvidas devem obedece
 - Francisco Almir dos Santos Junior
 - Diego
 - Gabriel
-- Yasmim
+- Yasmim de Andrade Lima
 
 deploy: https://www.netlify.com/
