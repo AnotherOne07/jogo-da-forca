@@ -1,0 +1,9 @@
+/* Este arquivo é destinado para fins de definir propriedades referentes ao layout geral das páginas do projeto */
+
+.flex{
+    display: flex;
+}
+
+.column{
+    flex-direction: column;
+}

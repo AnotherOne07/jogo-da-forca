@@ -1,0 +1,16 @@
+/* Este arquivo é destinado para fins de criar estilizações especificamente para os elementos de texto nas páginas do projeto */
+
+.text{
+    color: white;
+}
+
+.alter-text{
+    color: rgb(130, 10, 130);
+}
+.no-style{
+    text-decoration: none;
+    color: unset;
+}
+.shadow-effect{
+    text-shadow: 2px 2px 8px white;
+}
