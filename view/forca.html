@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
     <title>Jogo da Forca</title>
 </head>
 <body>
-    
+    <div class="top-20">
+        <a href="./menu.html" class="no-style shadow-effect"><button class="bt-primary no-border">Voltar</button></a>
+    </div>
+    <div class="flex center full"> 
+        <main class="main flex column margin-auto gap-20 center">
+            
+            <!--Elemento onde será construído o desenhho da forca-->
+            <div class="forca border">
+                
+            </div>
+
+            <!--Elemento onde será construída a palavra da rodada-->
+            <div class="word">
+                <table class="text">
+                    <tr>
+                        <td class="border box"></td>
+                        <td class="border box"></td>
+                        <td class="border box"></td>
+                        <td class="border box"></td>
+                        <td class="border box"></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!--Elemento onde será construído o teclado virtual que será utilizado para selecionar as letras-->
+            <div class="keyboard">
+                <table>
+                    <tr>
+                        <td><button class="bt-keyboard">Q</button></td>
+                        <td><button class="bt-keyboard">W</button></td>
+                        <td><button class="bt-keyboard">E</button></td>
+                        <td><button class="bt-keyboard">R</button></td>
+                        <td><button class="bt-keyboard">T</button></td>
+                        <td><button class="bt-keyboard">Y</button></td>
+                        <td><button class="bt-keyboard">U</button></td>
+                        <td><button class="bt-keyboard">I</button></td>
+                        <td><button class="bt-keyboard">O</button></td>
+                        <td><button class="bt-keyboard">P</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="bt-keyboard">A</button></td>
+                        <td><button class="bt-keyboard">S</button></td>
+                        <td><button class="bt-keyboard">D</button></td>
+                        <td><button class="bt-keyboard">F</button></td>
+                        <td><button class="bt-keyboard">G</button></td>
+                        <td><button class="bt-keyboard">H</button></td>
+                        <td><button class="bt-keyboard">J</button></td>
+                        <td><button class="bt-keyboard">K</button></td>
+                        <td><button class="bt-keyboard">L</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button class="bt-keyboard">Z</button></td>
+                        <td><button class="bt-keyboard">X</button></td>
+                        <td><button class="bt-keyboard">C</button></td>
+                        <td><button class="bt-keyboard">V</button></td>
+                        <td><button class="bt-keyboard">B</button></td>
+                        <td><button class="bt-keyboard">N</button></td>
+                        <td><button class="bt-keyboard">M</button></td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
