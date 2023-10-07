@@ -1,5 +1,8 @@
 /* Este arquivo é destinado para fins de criar estilizações especificamente para os elementos de texto nas páginas do projeto */
 
+.txt-center{
+    text-align: center;
+}
 .text{
     color: white;
 }
