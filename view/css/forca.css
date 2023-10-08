@@ -4,3 +4,61 @@
     height: 200px;
     position: relative;
 }
+.head{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.body{
+    height: 30px;
+    background-color: white;
+    width: 1px;
+}
+.member{
+    height: 30px;
+    width: 1px;
+    position: absolute;
+    background-color: white;
+}
+.arm-left{
+    top: 75px;
+    left: 88px;
+    transform: rotate(45deg);
+}
+.arm-right{
+    top: 75px;
+    right: 88px;
+    transform: rotate(135deg);
+}
+.leg-left{
+    top: 105px;
+    left: 88px;
+    transform: rotate(45deg);
+}
+.leg-rigth{
+    top: 105px;
+    right: 88px;
+    transform: rotate(135deg);
+}
+.hide{
+    visibility: hidden;
+}
+
+.hidden{
+    display: none;
+}
+
+.forca-torso{
+    height: 50px;
+    width: 1px;
+    position: absolute;
+    background-color: white;
+}
+.forca-head{
+    height: 40px;
+    width: 1px;
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    transform: rotate(90deg);
+}

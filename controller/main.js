@@ -46,7 +46,3 @@ function toggleThemeSection() {
     addBtn.classList.add('hide'); // esconde o botão de adicionar palavras
     selectThemeBtn.classList.add('hide'); // esconde o botão que levou à atual página
 }
-
-const name = "Almir";
-
-export {word}

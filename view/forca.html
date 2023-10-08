@@ -7,21 +7,49 @@
     <title>Jogo da Forca</title>
 </head>
 <body>
-    <div class="top-20">
+    <!-- <div class="top-20">
         <a href="./menu.html" class="no-style shadow-effect"><button class="bt-primary no-border">Voltar</button></a>
-    </div>
-    <div class="flex center full"> 
+    </div> -->
+    <div class="flex column center full"> 
+        
+        <div class="text main shadow-effect sucess-title top-30 hidden" id="succesAlert">
+            <p>Parabéns, você venceu essa rodada</p>
+            <br>
+            <p>Selecione uma opção abaixo: </p>
+            <div class="bt-section flex gap-20 center top-20">
+                <a href="./menu.html" class="no-style shadow-effect"><button class="bt-primary no-border">Voltar</button></a>
+                <a href="" class="no-style shadow-effect"><button class="bt-primary no-border" onclick="restartSession()">Reiniciar</button></a>
+            </div>
+        </div>
+
+        <div class="text main shadow-effect sucess-title top-30 hidden" id="failAlert">
+            <p>Que pena, você perdeu essa rodada</p>
+            <br>
+            <p>Selecione uma opção abaixo: </p>
+            <div class="bt-section flex gap-20 center top-20">
+                <a href="./menu.html" class="no-style shadow-effect"><button class="bt-primary no-border">Voltar</button></a>
+                <a href="" class="no-style shadow-effect"><button class="bt-primary no-border" onclick="restartSession()">Reiniciar</button></a>
+            </div>
+        </div>
+
         <main class="main flex column margin-auto gap-20 center">
             
             <!--Elemento onde será construído o desenhho da forca-->
-            <div class="forca border">
-                
+            <div class="forca border flex column center" id="forca">
+                <div class="head border top-50 hide"></div>
+                <div class="body hide"></div>
+                <div class="member arm-left hide"></div>
+                <div class="member arm-right hide"></div>
+                <div class="member leg-left hide"></div>
+                <div class="member leg-rigth hide"></div>
+                <div class="forca-torso"></div>
+                <div class="forca-head"></div>
             </div>
 
             <!--Elemento onde será construída a palavra da rodada-->
             <div class="word">
                 <table class="text">
-                    <tr>
+                    <tr id="word">
                         <!-- <td class="border box"></td>
                         <td class="border box"></td>
                         <td class="border box"></td>
@@ -35,16 +63,16 @@
             <div class="keyboard">
                 <table>
                     <tr>
-                        <td><button class="bt-keyboard" onclick="verifyExistance('q')">Q</button></td>
+                        <td><button class="bt-keyboard" onclick="verifyExistance('Q')">Q</button></td>
                         <td><button class="bt-keyboard" onclick="verifyExistance('w')">W</button></td>
-                        <td><button class="bt-keyboard" onclick="verifyExistance()">E</button></td>
+                        <td><button class="bt-keyboard" onclick="verifyExistance('E')">E</button></td>
                         <td><button class="bt-keyboard" onclick="verifyExistance('R')">R</button></td>
-                        <td><button class="bt-keyboard" onclick="verifyExistance()">T</button></td>
-                        <td><button class="bt-keyboard" onclick="verifyExistance()">Y</button></td>
-                        <td><button class="bt-keyboard" onclick="verifyExistance()">U</button></td>
+                        <td><button class="bt-keyboard" onclick="verifyExistance('T')">T</button></td>
+                        <td><button class="bt-keyboard" onclick="verifyExistance('Y')">Y</button></td>
+                        <td><button class="bt-keyboard" onclick="verifyExistance('U')">U</button></td>
                         <td><button class="bt-keyboard" onclick="verifyExistance('I')">I</button></td>
-                        <td><button class="bt-keyboard" onclick="verifyExistance()">O</button></td>
-                        <td><button class="bt-keyboard" onclick="verifyExistance()">P</button></td>
+                        <td><button class="bt-keyboard" onclick="verifyExistance('O')">O</button></td>
+                        <td><button class="bt-keyboard" onclick="verifyExistance('P')">P</button></td>
                     </tr>
                     <tr>
                         <td><button class="bt-keyboard" onclick="verifyExistance('A')">A</button></td>
