@@ -1,9 +1,0 @@
-/* Este arquivo é destinado para fins de criar estilização especificamente para elementos que representem botões dentro das páginas do projeto */
-
-.bt-primary{
-    background-color: rgb(130, 10, 130);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    color: rgb(202, 202, 202);
-}
