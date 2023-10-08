@@ -1,0 +1,9 @@
+/* Este arquivo é destinado para fins de criar estilizações especificamente para componentes presentes nas páginas do projeto */
+
+.main{
+    width: 40%;
+    background:#0f1d34;
+    opacity: 0.9;
+    padding: 30px;
+    border-radius: 10px;
+}

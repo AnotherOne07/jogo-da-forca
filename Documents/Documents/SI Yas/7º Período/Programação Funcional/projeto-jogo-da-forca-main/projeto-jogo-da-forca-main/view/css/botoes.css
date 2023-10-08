@@ -1,0 +1,33 @@
+/* Este arquivo é destinado para fins de criar estilização especificamente para elementos que representem botões dentro das páginas do projeto */
+
+.bt-primary{
+    background-color: rgb(130, 10, 130);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: rgb(202, 202, 202);
+}
+
+.button-column {
+    width: 50%; 
+    box-sizing: border-box; 
+    padding: 10px; 
+    display: flex;
+    flex-direction: column;
+}
+
+
+.button-column .bt-primary {
+    text-align: center; /* Centralizar o texto que está dentro dos botões */
+    padding: 10px;
+    background-color: rgb(130, 10, 130);
+    color: #fff;
+    border: solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bt-primary:hover {
+    background-color: #2980b9; /* Muda a cor de fundo ao passar o mouse */
+}
