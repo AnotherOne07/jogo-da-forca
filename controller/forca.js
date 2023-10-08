@@ -48,3 +48,5 @@ const verifyExistance = (word) => {
 const currentWord = constructWord(selectedWord)
 
 renderWord(currentWord);
+
+// Just a backup to recovery if something goes bad
