@@ -1,6 +1,6 @@
 // Sessão de inicialização
 const selectedWord = "ALMIR";
-const menuUrl = 'projeto-jogo-da-forca\view\menu.html'
+const menuUrl = 'projeto-jogo-da-forca\view\index.html'
 
 // Obtendo elemento da forca
 const drawForca = document.getElementById("forca").children
