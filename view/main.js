@@ -46,3 +46,29 @@ function toggleThemeSection() {
     addBtn.classList.add('hide'); // esconde o botão de adicionar palavras
     selectThemeBtn.classList.add('hide'); // esconde o botão que levou à atual página
 }
+
+
+
+function addNewWord() {
+    const input = document.getElementById('new-word');
+    const themeSelector = document.getElementById('theme-selector');
+    const selectorTheme = themeSelector.value;
+    // validation if length is valid
+    if (input.value.length >= 4 &&
+        input.value.length <= 8) {
+      if (selectorTheme === 'all') {
+        themes.all.push(input.value);
+      } else if (themes[selectorTheme]) {
+        themes[selectorTheme].push(input.value);
+      }
+        input.value = '';
+      localStorage.setItem('themes', JSON.stringify(themes));
+      
+//         createGameBoard();
+//         toggleAddSection();
+//         addBtn.classList.add('hide');
+//         selectThemeBtn.classList.add('hide');
+//         playBtn.classList.toggle('hide');
+        console.log(themes)
+    } else notifyInvalidWordInput();
+}

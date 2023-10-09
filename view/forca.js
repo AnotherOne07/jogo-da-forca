@@ -1,10 +1,62 @@
 // Sessão de inicialização
-const selectedWord = "ALMIR";
+// const selectedWord = myWord;
 const menuUrl = 'projeto-jogo-da-forca\view\index.html'
 
 // Obtendo elemento da forca
 const drawForca = document.getElementById("forca").children
 const arrayDrawForca = Array.from(drawForca)
+
+
+// objeto themes contém temas e cada tema tem uma matriz de palavras associadas a ele
+const themes = JSON.parse(localStorage.getItem('themes')) || {
+    esporte: ['futebol', 'basquete', 'natacao', 'volei', 'corrida'],
+    audiovisual: ['filme', 'série', 'atores', 'diretor', 'cinema'],
+    natureza: ['floresta', 'rio', 'montanha', 'foz', 'praia'],
+    all: ['teclado', 'abacaxi', 'copo', 'caneta', 'bolo', 'quadrado', 'adesivo', 'marcador',
+    'doce', 'folha', 'floresta', 'banco', 'cabelo', 'vermelho', 'desafio', 'porta',
+    'tinta', 'roupa', 'planeta', 'cadeira', 'chave', 'pipoca', 'pedra', 'amarelo',
+    'vento', 'sombra', 'morango', 'louco', 'sorvete', 'susto', 'cobra', 'estudo',
+    'canela', 'rede', 'nuvem', 'caixa', 'dinheiro', 'produto', 'prego', 'perfume',
+    'arroz', 'oceano'
+  ],
+  };
+  //escolhe aleatoriamente uma palavra com base no tema selecionado
+  function chooseRandomWord(theme) {
+    const themeWords = themes[theme];
+    if (themeWords && themeWords.length > 0) {
+      return themeWords[Math.floor(Math.random() * themeWords.length)].toUpperCase();
+    } else {
+      return "";
+    }
+  }
+
+// Variável que irá receber a palavra sorteada. Apesar de receber o statement LET, o valor de selectedWord só é atualizado uma vez
+// portando, apesar de dar margem para edição, esse comportamento não ocorre durante uma mesma rodada do jogo
+let selectedWord;
+
+// Função que irá selecionar o tema antes de iniciar o jogo e irá selecionar a palavra sorteada
+const startGame = () => {
+    const container = document.getElementById('theme-select-container')
+    const selectedTheme = document.getElementById('theme-select')
+    const theme = selectedTheme.value
+    const forca = document.getElementById('main')
+
+    // Se o jogador tiver selecionado um tema, será exibida a forca ja com a palavra sorteada
+    // Se o jogador nao selecionar um tema, sera exibida uma mensagem de erro
+    if(theme !== ''){
+        const randomSelectedWord = chooseRandomWord(theme)
+        selectedWord = randomSelectedWord
+        container.classList.add('hide')
+        forca.classList.remove('hide')
+        const currentWord = constructWord(selectedWord)
+        renderWord(currentWord)
+    }else{
+        const errorMsg = document.getElementById('errorMsg')
+        errorMsg.classList.remove('hide')
+    }
+    return 0
+}
+
 
 // Função que irá desativar o teclado a fim de evitar que o jogador pressione uma tecla após ter perdido a rodada
 const disableKeyboard = () => {
@@ -141,7 +193,5 @@ const verifyExistance = (word) => {
 }
 
 // Renderizando a palavra na tela, inserindo o devido elemento HTML
-const currentWord = constructWord(selectedWord);
-renderWord(currentWord);
-
-// const restartSession = ()
+// const currentWord = constructWord(selectedWord);
+// renderWord(currentWord);

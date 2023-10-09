@@ -15,7 +15,7 @@ Outra característica do projeto é que as funções desenvolvidas devem obedece
     - O sistema irá selecionar aleatoriamente uma palavra associada ao tema 
     selecionado pelo usuário.
     - O sistema irá exibir uma nova tela, que contém um "teclado virtual", 
-    um conjunto de linhas "em branco"(quantidade de linhas será igual ao 
+    um conjunto de quadrados "em branco"(quantidade de quadrados será igual ao 
     número de caracteres da palavras selecionada pelo sistema) e um desenho 
     de uma forca.
     - Se o usuário clicar em uma letra do teclado virtual que pertence ao 
@@ -24,7 +24,7 @@ Outra característica do projeto é que as funções desenvolvidas devem obedece
     selecionada pelo usuário.
     - Se o usuário clicar em uma letra que não pertence ao conjunto de caracteres, 
     ele terá sua vida reduzida em uma unidade.
-    - Ao final será possível reiniciar o jogo no mesmo tema ou desistir e alterá-lo.
+    - Ao final será possível reiniciar o jogo e selecionar um tema novamente ou desistir e voltar para a tela inicial.
 
 ## Padrões adotados
     - Declaração de constantes e funções: camelCase

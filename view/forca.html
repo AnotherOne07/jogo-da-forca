@@ -32,7 +32,27 @@
             </div>
         </div>
 
-        <main class="main flex column margin-auto gap-20 center">
+        <div class="top-30" id="theme-select-container">
+            <div class="hide" id="errorMsg">
+                ERRO! SELECIONE UM TEMA
+            </div>
+            <form action="">
+
+            <select id="theme-select" class="theme-select">
+              <option value="">Selecione um tema</option>
+              <option value="esporte">Esporte</option>
+              <option value="audiovisual">Filmes e Séries</option>
+              <option value="natureza">Natureza</option>
+              <option value="all">Geral</option>
+            </select>
+            </form>
+    
+            <div class="buttons-container theme">
+              <button id="btn-confirmar" onclick="startGame()">Confirmar e iniciar</button>
+            </div>
+        </div>
+
+        <main class="main flex column margin-auto gap-20 center hide" id="main">
             
             <!--Elemento onde será construído o desenhho da forca-->
             <div class="forca border flex column center" id="forca">
