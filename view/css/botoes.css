@@ -6,8 +6,16 @@
     border-radius: 10px;
     text-align: center;
     color: rgb(202, 202, 202);
+    border: black solid 1px;
 }
 
-.bt-section{
-    width: 100%;
+.bt-primary:hover{
+    background-color: rgb(43, 127, 196)
+}
+
+.button-column{
+    display: flex;
+    flex: column;
+    border-radius: 10px;
+    
 }
