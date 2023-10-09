@@ -1,0 +1,504 @@
+/* Coisa úteis */
+/* Este arquivo é destinado para fins de criar classes de estilo mais gerais, que podem ser aplicados em elementos diversos nas páginas */
+.center{
+    align-items: center;
+    justify-items: center;
+}
+.top-20{
+    margin-top: 20px;
+}
+.top-30{
+    margin-top: 30px;
+}
+.top-50{
+    margin-top: 50px;
+}
+.gap-10{
+    gap: 10px;
+}
+.gap-15{
+    gap: 15px;
+}
+.gap-20{
+    gap: 20px;
+}
+.margin-auto{
+    margin: auto;
+}
+.full{
+    width: 100%;
+    height: 100vh;
+}
+.box{
+    width: 30px;
+    height: 30px;
+}
+.border{
+    border: 1px solid white;
+}
+.no-border{
+    border: none;
+}
+
+/* Animação */
+
+.container{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+.bubbles{
+    position: relative;
+    display: flex;
+}
+.bubbles span{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(130, 10, 130);
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 0 5px rgb(71, 4, 71),
+        0 0 50px rgb(130, 10, 130),
+        0 0 80px rgb(130, 10, 130);
+    animation: animate 15s infinite;
+    animation-duration: calc(125s/ var(--i));
+}
+
+.bubbles span:nth-child(even){
+    background: rgb(5, 151, 255);
+    box-shadow: 
+        0 0 0 5px rgb(3, 59, 98),
+        0 0 50px rgb(5, 151, 255),
+        0 0 80px rgb(5, 151, 255);   
+}
+
+/* Adicionar as animacoes e as transicoes */
+
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+
+/* VARIABLES */
+:root{
+    --black-color: #252022;
+    --white-color: #dcdcdc;
+    --red-color: #db303e;
+    --green-color: #0CCE6B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--white-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+}
+
+body {
+/*     animation: cloudAnimation 10s linear infinite; 10s de duração, linear e infinita
+    background: linear-gradient(to bottom, #000, #3A266D, #6847A0, #0074E4, #B3E0FF);  */
+    background: var(--black-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: overlay;
+}
+
+
+
+header, footer {
+    padding-block: .8rem .5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80%;
+}
+
+button {
+    background-color: rgb(130, 10, 130);
+    color: rgb(202, 202, 202);
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+/* GAME */
+
+#game-status {
+    margin: 0;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.win {
+    color: var(--green-color);
+}
+
+.lose {
+    color: var(--red-color);
+}
+
+/* VIRTUAL KEYBOARD */
+
+.letter {
+    font-size: 1rem;
+    margin: 0.25rem;
+    width: 3rem;
+}
+
+.correct {
+    color: var(--green-color);
+    opacity: 0.3;
+}
+
+.incorrect {
+    color: var(--red-color);
+    opacity: 0.3;
+}
+
+/* MENU */
+
+.buttons-container button{
+    margin: 0.5rem;
+    width: 200px;
+}
+
+.buttons-container.initial {
+    display: flex;
+    flex-direction: column;
+} 
+
+.buttons-container.initial button {
+    align-self: center;
+    padding: 1rem;
+    width: 200px;
+}
+
+/* ADD NEW WORD SECTION */
+#theme-selector {
+  width: 100%;
+  color: black;
+}
+
+.add-button {
+  margin: 10px;
+}
+
+#add-section {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+#add-section.hide {
+    display: none;
+}
+
+#add-section input {
+    background-color: var(--white-color);
+    border-radius: 6px;
+    color: var(--black-color);
+    padding: 0.5rem;
+    width: 100%;
+}
+
+#add-section svg {
+    fill: var(--white-color);
+    width: 1rem;
+}
+
+#add-section p {
+    font-size: 0.8rem;
+    display: flex;
+    gap: 0.5rem;
+    margin-block: 1rem;
+}
+
+#add-section p.invalid,
+#add-section p.invalid svg {
+    fill: var(--red-color);
+    color: var(--red-color);
+    transition: fill 0.5s ease-in-out;
+    transition: color 0.2s ease-in-out;
+}
+
+#add-section .buttons-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* THEME MANIPULATION SECTION */
+
+#bom-dia.hide {
+    display: none;
+}
+
+#btn-confirmar.hide {
+    display: none;
+}
+
+
+#theme-select {
+  display: none; /* Oculta a caixa de seleção inicialmente */
+  margin: 10px auto;
+  width: 300px;
+  font-size: 20px;
+  color: black;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.75rem;
+}
+
+footer a, p{
+    font-weight: 600;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 570px) {
+    canvas {
+        width: 100%;
+    }
+
+    .buttons-container.initial button {
+        width: 40%;
+    }
+    
+    .letter {
+        width: 1.8rem;
+    }
+}
+
+/* //////////////////////////////////////////// */
+
+.bt-section {
+    width: 100%;
+}
+
+/* layout.css */
+.main {
+    width: 40%;
+    background: #0f1d34;
+    opacity: 0.9;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* apoio.css */
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+/* texto.css */
+.txt-center {
+    text-align: center;
+}
+
+.text {
+    color: white;
+}
+
+.alter-text {
+    color: rgb(130, 10, 130);
+}
+
+.no-style {
+    text-decoration: none;
+    color: unset;
+}
+
+.shadow-effect {
+    text-shadow: 2px 2px 8px white;
+}
+
+.sucess-title {
+    font-size: 20px;
+}
+
+/* forca.css */
+.forca {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.head {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.body {
+    height: 30px;
+    background-color: white;
+    width: 1px;
+}
+
+.member {
+    height: 30px;
+    width: 1px;
+    position: absolute;
+    background-color: white;
+}
+
+.arm-left {
+    top: 75px;
+    left: 88px;
+    transform: rotate(45deg);
+}
+
+.arm-right {
+    top: 75px;
+    right: 88px;
+    transform: rotate(135deg);
+}
+
+.leg-left {
+    top: 105px;
+    left: 88px;
+    transform: rotate(45deg);
+}
+
+.leg-rigth {
+    top: 105px;
+    right: 88px;
+    transform: rotate(135deg);
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.forca-torso {
+    height: 50px;
+    width: 1px;
+    position: absolute;
+    background-color: white;
+}
+
+.forca-head {
+    height: 40px;
+    width: 1px;
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    transform: rotate(90deg);
+}
+
+/* teclado.css */
+.bt-keyboard {
+    font-size: 16px;
+    width: 30px;
+    color: #0c192c;
+}
+
+.bt-keyboard:hover {
+    background: rgb(130, 10, 130);
+    color: white;
+}
+
+/* adicionais.css (importado em outros arquivos) */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #0c192c;
+}
+
+/* Este arquivo é destinado para fins de criar estilizações especificamente para os elementos de texto nas páginas do projeto */
+.txt-center {
+    text-align: center;
+}
+
+.text {
+    color: white;
+}
+
+.alter-text {
+    color: rgb(130, 10, 130);
+}
+
+.no-style {
+    text-decoration: none;
+    color: unset;
+}
+
+.shadow-effect {
+    text-shadow: 2px 2px 8px white;
+}
+
+.sucess-title {
+    font-size: 20px;
+}
+
+#bom-dia.hide {
+    display: none;
+}
+
+#theme-select {
+    display: none;
+    margin: 10px auto;
+    width: 300px;
+    font-size: 20px;
+    color: black;
+}
+
+.end-game-text {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o elemento no meio da tela */
+    z-index: 1000; /* Define uma camada superior para garantir que a mensagem apareça acima de outros elementos */
+}
