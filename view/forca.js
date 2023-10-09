@@ -8,18 +8,19 @@ const arrayDrawForca = Array.from(drawForca)
 
 
 // objeto themes contém temas e cada tema tem uma matriz de palavras associadas a ele
-const themes = JSON.parse(localStorage.getItem('themes')) || {
-    esporte: ['futebol', 'basquete', 'natacao', 'volei', 'corrida'],
-    audiovisual: ['filme', 'série', 'atores', 'diretor', 'cinema'],
-    natureza: ['floresta', 'rio', 'montanha', 'foz', 'praia'],
-    all: ['teclado', 'abacaxi', 'copo', 'caneta', 'bolo', 'quadrado', 'adesivo', 'marcador',
-    'doce', 'folha', 'floresta', 'banco', 'cabelo', 'vermelho', 'desafio', 'porta',
-    'tinta', 'roupa', 'planeta', 'cadeira', 'chave', 'pipoca', 'pedra', 'amarelo',
-    'vento', 'sombra', 'morango', 'louco', 'sorvete', 'susto', 'cobra', 'estudo',
-    'canela', 'rede', 'nuvem', 'caixa', 'dinheiro', 'produto', 'prego', 'perfume',
-    'arroz', 'oceano'
-  ],
-  };
+// const themes = JSON.parse(localStorage.getItem('themes')) || {
+//     esporte: ['futebol', 'basquete', 'natacao', 'volei', 'corrida'],
+//     audiovisual: ['filme', 'série', 'atores', 'diretor', 'cinema'],
+//     natureza: ['floresta', 'rio', 'montanha', 'foz', 'praia'],
+//     all: ['teclado', 'abacaxi', 'copo', 'caneta', 'bolo', 'quadrado', 'adesivo', 'marcador',
+//     'doce', 'folha', 'floresta', 'banco', 'cabelo', 'vermelho', 'desafio', 'porta',
+//     'tinta', 'roupa', 'planeta', 'cadeira', 'chave', 'pipoca', 'pedra', 'amarelo',
+//     'vento', 'sombra', 'morango', 'louco', 'sorvete', 'susto', 'cobra', 'estudo',
+//     'canela', 'rede', 'nuvem', 'caixa', 'dinheiro', 'produto', 'prego', 'perfume',
+//     'arroz', 'oceano'
+//   ],
+//   };
+
   // escolhe aleatoriamente uma palavra com base no tema selecionado
   // Para essa função, era estritamente necessário que utiliza um comportamento randomico
   // A alternativa a isso seria utilizar um outro input, onde o formulario escolheria um numero e esse numero seria correspondente
