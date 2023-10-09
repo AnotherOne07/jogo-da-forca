@@ -45,3 +45,4 @@ Outra característica do projeto é que as funções desenvolvidas devem obedece
 - Yasmim de Andrade Lima
 
 deploy: https://projeto-forca-dfgy.netlify.app/
+vídeo: https://drive.google.com/file/d/15x8Wpkzl61WblOg8H3Qbt5ropMjD_ZK0/view?usp=drive_link
