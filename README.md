@@ -35,6 +35,9 @@ Outra característica do projeto é que as funções desenvolvidas devem obedece
     - Adicionar um sistema de dica
     - Adicionar responsividade para dispositivos mobile
     -
+## Referência
+    https://github.com/Joi-GN/jogo-da-forca-js.git
+    
 ## Equipe de desenvolvimento
 - Francisco Almir dos Santos Junior
 - Diego Carvalho Cavalcante
