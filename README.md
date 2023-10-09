@@ -17,20 +17,22 @@ Outra característica do projeto é que as funções desenvolvidas devem obedece
     - O sistema irá exibir uma nova tela, que contém um "teclado virtual", 
     um conjunto de linhas "em branco"(quantidade de linhas será igual ao 
     número de caracteres da palavras selecionada pelo sistema) e um desenho 
-    de uma forca. Além disso sistema irá exibir o tema selecionado pelo usuário.
+    de uma forca.
     - Se o usuário clicar em uma letra do teclado virtual que pertence ao 
     conjunto de caracteres da palavra selecionada aleatoriamente pelo sistema, 
     o sistema irá substituir a linha em branco por uma linha contendo a palavra 
     selecionada pelo usuário.
     - Se o usuário clicar em uma letra que não pertence ao conjunto de caracteres, 
     ele terá sua vida reduzida em uma unidade.
+    - Ao final será possível reiniciar o jogo no mesmo tema ou desistir e alterá-lo.
 
 ## Padrões adotados
     - Declaração de constantes e funções: camelCase
-    - Comentários e declarações em português.
+    - Comentários em português.
+    - Linguagem durante a criação a escolha do programador. 
 ## Equipe de desenvolvimento
 - Francisco Almir dos Santos Junior
-- Diego
+- Diego Carvalho Cavalcante
 - Gabriel
 - Yasmim
 
