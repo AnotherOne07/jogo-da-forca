@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="main.js"></script>
+    <!-- Importando arquivos de estilização locais -->
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Adicionar Palavras</title>
+</head>
+<body>
+    <!-- Container da animação do background -->
+    <div class="container">
+        <!-- Aqui você pode incluir a mesma animação do background que está na página anterior, se desejar -->
+    </div>
+    <div class="bt-section flex gap-20 center top-20">
+        <a href="./index.html" class="no-style shadow-effect"><button class="bt-primary no-border">Voltar</button></a>
+    </div>
+    <div class="flex center full">
+        <!-- Container principal da página -->
+        <main class="main flex column margin-auto gap-20 center">
+            <h1 class="alter-text top-30">Adicionar Palavras</h1>
+            <!-- Formulário para adicionar palavras -->
+            <form class="flex column gap-20">
+                <label for="new-word" style="color: white;">Nova Palavra:</label>
+                <input type="text" id="new-word" name="new-word" required>
+                
+                <label for="theme-selector" style="color: white;">Tema:</label>
+                <select id="theme-selector" name="theme-selector">
+                    <!-- Aqui você pode incluir as opções de temas disponíveis -->
+                    <option value="esporte">Esporte</option>
+                    <option value="audiovisual">Audiovisual</option>
+                    <option value="natureza">Natureza</option>
+                    <option value="geral">Geral</option>
+                    <!-- Adicione mais temas conforme necessário -->
+                </select>
+                <p id="notice" style="color: white;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20" style="display: inline-block; vertical-align: middle;">
+                      <!-- Ícone SVG aqui -->
+                      <path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM232 152C232 138.8 242.8 128 256 128s24 10.75 24 24v128c0 13.25-10.75 24-24 24S232 293.3 
+                      232 280V152zM256 400c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 385.9 273.4 400 256 400z" fill="#fff" />
+                    </svg>
+                    Permitido palavras de 4 a 8 letras e sem acentuação
+                  </p>                  
+                <div class="button-column">
+                    <button id="add-word-btn" class="bt-primary no-border" type="button">Adicionar Palavra</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
