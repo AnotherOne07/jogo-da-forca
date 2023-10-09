@@ -33,7 +33,7 @@ Outra característica do projeto é que as funções desenvolvidas devem obedece
 ## Equipe de desenvolvimento
 - Francisco Almir dos Santos Junior
 - Diego Carvalho Cavalcante
-- Gabriel
-- Yasmim
+- Gabriel Prado Oliveira Antonello
+- Yasmim de Andrade Lima
 
-deploy: https://www.netlify.com/
+deploy: https://projeto-forca-dfgy.netlify.app/
