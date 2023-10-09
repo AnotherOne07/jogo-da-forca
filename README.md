@@ -29,7 +29,12 @@ Outra característica do projeto é que as funções desenvolvidas devem obedece
 ## Padrões adotados
     - Declaração de constantes e funções: camelCase
     - Comentários em português.
-    - Linguagem durante a criação a escolha do programador. 
+    - Linguagem durante a criação a escolha do programador.
+
+## Possibilidade de melhoras
+    - Adicionar um sistema de dica
+    - Adicionar responsividade para dispositivos mobile
+    -
 ## Equipe de desenvolvimento
 - Francisco Almir dos Santos Junior
 - Diego Carvalho Cavalcante

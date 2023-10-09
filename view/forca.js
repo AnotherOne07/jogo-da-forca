@@ -20,7 +20,10 @@ const themes = JSON.parse(localStorage.getItem('themes')) || {
     'arroz', 'oceano'
   ],
   };
-  //escolhe aleatoriamente uma palavra com base no tema selecionado
+  // escolhe aleatoriamente uma palavra com base no tema selecionado
+  // Para essa função, era estritamente necessário que utiliza um comportamento randomico
+  // A alternativa a isso seria utilizar um outro input, onde o formulario escolheria um numero e esse numero seria correspondente
+  // a alguma palavra na lista de palavras
   function chooseRandomWord(theme) {
     const themeWords = themes[theme];
     if (themeWords && themeWords.length > 0) {
@@ -46,8 +49,13 @@ const startGame = () => {
     if(theme !== ''){
         const randomSelectedWord = chooseRandomWord(theme)
         selectedWord = randomSelectedWord
+        
+        // Ocultando os termos que nao devem aparecer durante a execução do jogo
+        // E renderizando elementos que devem ser exibidos
         container.classList.add('hide')
         forca.classList.remove('hide')
+        
+        // Renderizando a palavra na tela, inserindo o devido elemento HTML
         const currentWord = constructWord(selectedWord)
         renderWord(currentWord)
     }else{
@@ -139,10 +147,10 @@ const renderWord = (elem) => {
 }
 
 // Função que receb como parâmetro uma letra e verifica se ela existe em uma palavra, retornando uma lista com as posições onde a palavra foi encontrada
-const verificarLetra = (letra,[x,...xs],acc=0) => {
+const verifyWord = (letra,[x,...xs],acc=0) => {
     if (indef(x)) return []
-    else if (letra == x) return [acc,...verificarLetra(letra,xs,acc+1)]
-    else return [...verificarLetra(letra,xs,acc+1)]
+    else if (letra == x) return [acc,...verifyWord(letra,xs,acc+1)]
+    else return [...verifyWord(letra,xs,acc+1)]
 }
 
 // Função que dada uma posicão(id) e uma string, irá renderizar na tela a string na posição indicada
@@ -158,6 +166,8 @@ const renderDraw = (draw) => {
     const [head,...tail] = draw
     // Funçao que remove a classe hide do elemento
     const removeElement = head.classList.remove("hide")
+    // Para esse método foi estritamente necessário alterar uma lista original pois é necessário que enquanto o programa estiver em execução
+    // exista uma ideia de "vida" do jogador
     draw.shift()
     if(draw.length == 2){
         showFailAlert()
@@ -167,7 +177,7 @@ const renderDraw = (draw) => {
 // Função que verifica a existência da letra na palavra e realiza a devida ação para o caso de existir ou não existir
 const verifyExistance = (word) => {
     // Verifica se dada a letra word, existe alguma posição na palavra da rodada que corresponda
-    const currentPosition = verificarLetra(word, selectedWord);
+    const currentPosition = verifyWord(word, selectedWord);
 
     // Função que dada uma lista, faz uma iteração para adicionar a letra às posições correspondentes
     const iteratePosition = (list) => {
